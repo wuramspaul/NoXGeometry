@@ -1,1 +1,1 @@
-gcc NXG.c && ./a.out && rm a.out
+g++ NXG.cpp -g  -O0 -o NXG
