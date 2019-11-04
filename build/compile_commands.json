@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/mpa/NoXGeometry/build",
+  "command": "/bin/g++    -g   -o CMakeFiles/NoXGeometry.dir/main.cpp.o -c /home/mpa/NoXGeometry/main.cpp",
+  "file": "/home/mpa/NoXGeometry/main.cpp"
+}
+]
