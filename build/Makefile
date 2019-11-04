@@ -110,6 +110,100 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named NoXGeometry0.1
+
+# Build rule for target.
+NoXGeometry0.1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NoXGeometry0.1
+.PHONY : NoXGeometry0.1
+
+# fast build rule for target.
+NoXGeometry0.1/fast:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/build
+.PHONY : NoXGeometry0.1/fast
+
+src/MetdLibs/SimpleGeom.o: src/MetdLibs/SimpleGeom.cpp.o
+
+.PHONY : src/MetdLibs/SimpleGeom.o
+
+# target to build an object file
+src/MetdLibs/SimpleGeom.cpp.o:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/MetdLibs/SimpleGeom.cpp.o
+.PHONY : src/MetdLibs/SimpleGeom.cpp.o
+
+src/MetdLibs/SimpleGeom.i: src/MetdLibs/SimpleGeom.cpp.i
+
+.PHONY : src/MetdLibs/SimpleGeom.i
+
+# target to preprocess a source file
+src/MetdLibs/SimpleGeom.cpp.i:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/MetdLibs/SimpleGeom.cpp.i
+.PHONY : src/MetdLibs/SimpleGeom.cpp.i
+
+src/MetdLibs/SimpleGeom.s: src/MetdLibs/SimpleGeom.cpp.s
+
+.PHONY : src/MetdLibs/SimpleGeom.s
+
+# target to generate assembly for a file
+src/MetdLibs/SimpleGeom.cpp.s:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/MetdLibs/SimpleGeom.cpp.s
+.PHONY : src/MetdLibs/SimpleGeom.cpp.s
+
+src/StdNXG.o: src/StdNXG.cpp.o
+
+.PHONY : src/StdNXG.o
+
+# target to build an object file
+src/StdNXG.cpp.o:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/StdNXG.cpp.o
+.PHONY : src/StdNXG.cpp.o
+
+src/StdNXG.i: src/StdNXG.cpp.i
+
+.PHONY : src/StdNXG.i
+
+# target to preprocess a source file
+src/StdNXG.cpp.i:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/StdNXG.cpp.i
+.PHONY : src/StdNXG.cpp.i
+
+src/StdNXG.s: src/StdNXG.cpp.s
+
+.PHONY : src/StdNXG.s
+
+# target to generate assembly for a file
+src/StdNXG.cpp.s:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/StdNXG.cpp.s
+.PHONY : src/StdNXG.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/NoXGeometry0.1.dir/build.make CMakeFiles/NoXGeometry0.1.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -117,7 +211,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... NoXGeometry0.1"
 	@echo "... edit_cache"
+	@echo "... src/MetdLibs/SimpleGeom.o"
+	@echo "... src/MetdLibs/SimpleGeom.i"
+	@echo "... src/MetdLibs/SimpleGeom.s"
+	@echo "... src/StdNXG.o"
+	@echo "... src/StdNXG.i"
+	@echo "... src/StdNXG.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

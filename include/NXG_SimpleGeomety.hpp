@@ -1,4 +1,5 @@
-#include "../StdNXG.hpp"
+#include "StdNXG.hpp"
+
 output_t equally(input_t*); // 0 - x
 output_t equally2(input_t* input);  // 0 - x
 output_t equally2y(input_t* input); // 0 - x

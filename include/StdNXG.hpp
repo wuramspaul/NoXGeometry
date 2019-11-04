@@ -1,7 +1,7 @@
+#ifndef NXG
+#define NXG
 #define MAXELEM 100
-#ifdef DEBUG
 
-#endif // DEBUG
 struct tree_t{
   short int type;
   void* Stru;
@@ -55,3 +55,4 @@ struct TreeObj_t{
 
 tree_t BGTMain(tree_t* root); // Самая главная функция для обхода Большого Геометрического Дерева (.BGT)
 tree_t SGTMain(tree_t* root); // Функция для нахождения значений в Малом Геометрическом Дереве (.SGT)
+#endif // 

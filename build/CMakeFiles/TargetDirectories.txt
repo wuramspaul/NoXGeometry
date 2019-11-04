@@ -1,2 +1,3 @@
 /home/mpa/NoXGeometry/build/CMakeFiles/rebuild_cache.dir
+/home/mpa/NoXGeometry/build/CMakeFiles/NoXGeometry0.1.dir
 /home/mpa/NoXGeometry/build/CMakeFiles/edit_cache.dir
