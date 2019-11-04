@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include "../StdNXG.h"
+#include "../StdNXG.hpp"
 
 output_t equally(input_t* input){ // Функция испольуется если обекты равны
   int n = input->n;

@@ -1,5 +1,7 @@
 #define MAXELEM 100
+#ifdef DEBUG
 
+#endif // DEBUG
 struct tree_t{
   short int type;
   void* Stru;

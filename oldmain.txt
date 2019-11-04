@@ -1,6 +1,6 @@
 #include <iostream>
-#include "StdNXG.h"
-#include "NXG_Geom_metod.h"
+#include "StdNXG.hpp"
+#include "MetdLibs/NXG_SimpleGeomety.hpp"
 
 int main(){
 

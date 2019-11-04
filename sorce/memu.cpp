@@ -75,8 +75,8 @@ int menuinput(int numer){
     break;
   case 8:
     std::cout << num++ << "1. [ ] geometry_simple" << std::endl;
-    std::cout << num++ << "2. [x] geometry_advanse " << std::endl;  
-    std::cout << num++ << "3. [*] geometry_full " << std::endl;  
+    std::cout << num++ << "2. [ ] geometry_advanse " << std::endl;  
+    std::cout << num++ << "3. [ ] geometry_full " << std::endl;  
     std::cout << std::endl;
     std::cout << 0 << "0. Return" << std::endl;
     break;
