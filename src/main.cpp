@@ -6,7 +6,7 @@ int main(){
   TreeMetd_t met1;  met1.dif = 3;  met1.metd.foo = equally; met1.count_obj = 0; met1.Objs[0] = nullptr;
   TreeMetd_t met2;  met2.dif = 2;  met2.metd.foo = equally2; met2.count_obj = 0; met2.Objs[0] = nullptr;
   TreeMetd_t met3;  met3.dif = 1;  met3.metd.foo = equally2y; met3.count_obj = 0; met3.Objs[0] = nullptr;
-
+  
   TreeObj_t obj; obj.count_metd = 3; obj.dif = 0; obj.obj.isOpred = 0; obj.obj.val = 0; obj.type = -1; 
 
   tree_t tree[MAXELEM];

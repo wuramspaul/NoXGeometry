@@ -18,6 +18,7 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
-message("CREATE PROJECT = [${PROJECT_NAME}]. VERSION = [${${PROJECT_NAME}_VERSION}]")
+message("CONFIGURE PROJECT = [${PROJECT_NAME}]. VERSION = [${${PROJECT_NAME}_VERSION}]")
 
 add_executable("${PROJECT_NAME}${${PROJECT_NAME}_VERSION}" src/main.cpp src/StdNXG.cpp src/MetdLibs/SimpleGeom.cpp)
+add_executable("${PROJECT_NAME}_MENU" src/menu.cpp src/StdNXG.cpp src/MetdLibs/SimpleGeom.cpp)
