@@ -1,6 +1,6 @@
 #include <iostream>
-#include "StdNXG.hpp"
-#include "NXG_SimpleGeomety.hpp"
+#include "NoXG.hpp"
+#include "NoXG_2D_simple_X.hpp"
 
 int main(){
   TreeMetd_t met1;  met1.dif = 3;  met1.metd.foo = equally; met1.count_obj = 0; met1.Objs[0] = nullptr;
@@ -32,7 +32,7 @@ int main(){
   input_t input; input.n = 1; std::cout << "Введите x : "; std::cin >> input.elem[0]; 
   TreeMetd_t* tempobj = (TreeMetd_t*) tree[min_i].Stru;
   
-  output_t output = (tempobj->metd.foo)(&input);
+  output_t output = *(tempobj->metd.foo)(&input);
 
   printf("Ответ : %f\n", output.val[0]);
   return 0;

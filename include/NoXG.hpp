@@ -1,5 +1,5 @@
-#ifndef NXG
-#define NXG
+#ifndef NoXG
+#define NoXG
 #define MAXELEM 100
 
 struct tree_t{
@@ -22,6 +22,11 @@ struct inputdata_t{
   input_t (*foo_input);
 };
 
+struct outputdata_t{
+  int n; // количество элементов для вывода
+  output_t (*foo_output);
+};
+
 struct outpudata_t{
   short int type; // тип(номер) метода для вывода значенией
   void (*foo_output)(output_t);
@@ -29,7 +34,7 @@ struct outpudata_t{
 
 struct metoddata_t{
   short int type; // тип(номер) метода 
-  output_t (*foo)(input_t*);
+  output_t* (*foo)(input_t*);
 };
 
 struct objectdata_t{
@@ -52,7 +57,6 @@ struct TreeObj_t{
   short int type;
 };
 
-
 tree_t* BGTMain(tree_t* root); // Самая главная функция для обхода Большого Геометрического Дерева (.BGT)
 tree_t* SGTMain(tree_t* root); // Функция для нахождения значений в Малом Геометрическом Дереве (.SGT)
-#endif // 
+#endif /* NXG */ 
