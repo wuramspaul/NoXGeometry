@@ -1,10 +1,36 @@
 #ifndef NoXG
 #define NoXG
-#define MAXELEM 100
+
+#define MAXELEM   16
+#define MAXNAME   256
+#define MAXATRB   4 /* 0 - isOpred?, 1 - isPrint?, 2 - isInput?, 3 - isList? */ 
+#define MAXVALUE  1000
+#define MAXDEF    1000
+#define MINVALUE  0
+#define MINDEF    0
+
+#define METODTYPE 2 // Значение метода
+#define OBJECTYPE 1 // Значение обекта
+#define HZNAITYPE 0 // Неопределенный тип
+
+#define OPRED_FLAG  0
+#define OUTPUT_FLAG 1
+#define INPUT_FLAG  2
+#define LIST_FLAG   3
 
 struct tree_t{
-  short int type;
+  bool atrib[MAXATRB];
+  short int type; // 0 - neopred; 1 - obj; 2 - metd
   void* Stru;
+  float dif; // сложность 
+};
+
+struct finalTree_t{
+  bool atrib[MAXATRB];
+  short int type; // 0 - neopred; 1 - obj; 2 - metd
+  void* Stru;
+  void (*foooutput)(TreeMetd_t* Stru);
+  input_t* (*fooinput)(TreeInput_t* metd);
 };
 
 struct input_t{
@@ -17,46 +43,28 @@ struct output_t{
   float val[MAXELEM];
 };
 
-struct inputdata_t{
-  short int type; // тип(номер) метода для ввода значенией
+struct TreeInput_t{
+  int n; // количество элементов для ввода
   input_t (*foo_input);
 };
 
-struct outputdata_t{
+struct TreeOutput_t{
   int n; // количество элементов для вывода
-  output_t (*foo_output);
-};
-
-struct outpudata_t{
-  short int type; // тип(номер) метода для вывода значенией
   void (*foo_output)(output_t);
 };
 
-struct metoddata_t{
-  short int type; // тип(номер) метода 
-  output_t* (*foo)(input_t*);
-};
-
-struct objectdata_t{
-  bool isOpred;
-  float val;
-};
-
 struct TreeMetd_t{
-  int dif; // сложность 
-  metoddata_t metd;
-  int count_obj; // количество методов для обекта
+  output_t* (*metd)(input_t*);
+  int count_obj; // количество обектов для метода
   tree_t* Objs[MAXELEM];
 };
 
 struct TreeObj_t{
-  int dif; // сложность 
-  objectdata_t obj; // объект 
+  void* obj; // объект 
+  short int type; // тип обекта 
+  char name[MAXNAME]; // имя
   int count_metd; // количество методов для обекта
-  tree_t* Mets[MAXELEM];
-  short int type;
+  tree_t* Mets[MAXELEM]; // указатели на методы 
 };
 
-tree_t* BGTMain(tree_t* root); // Самая главная функция для обхода Большого Геометрического Дерева (.BGT)
-tree_t* SGTMain(tree_t* root); // Функция для нахождения значений в Малом Геометрическом Дереве (.SGT)
-#endif /* NXG */ 
+#endif /* NoXG */ 

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "StdNXG.hpp"
+#include "NoXG.hpp"
 #include "NoXGMenu.hpp"
 
 using namespace std;

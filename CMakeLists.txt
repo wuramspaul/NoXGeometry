@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(NoXGeometry)
 set (${PROJECT_NAME}_VERSION_MAJOR 0)
 set (${PROJECT_NAME}_VERSION_MINOR 1)
-set (${PROJECT_NAME}_VERSION_PATCH 1)
+set (${PROJECT_NAME}_VERSION_PATCH 2)
 
 
 # PATCH NAME CREATE
@@ -19,9 +19,9 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR}/src_lib)
 
-add_library(SimpleNoXG STATIC
-  src_lib/StdNXG.cpp
-  src_lib/SimpleGeom.cpp
+add_library(NoXG2DsimpleX STATIC
+  src_lib/NoXG.cpp
+  src_lib/NoXG_2D_simple.cpp
 )
 
 add_library(NoXGMenu STATIC
@@ -36,10 +36,10 @@ add_executable("${PROJECT_NAME}_menu" src/menu.cpp)
 
 target_link_libraries("${PROJECT_NAME}${${PROJECT_NAME}_VERSION}"
   PRIVATE
-    SimpleNoXG
+    NoXG2DsimpleX
 )
 
 target_link_libraries("${PROJECT_NAME}_menu"
   PRIVATE
-   NoXGMenu
+    NoXGMenu
 )
